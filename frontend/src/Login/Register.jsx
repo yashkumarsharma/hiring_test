@@ -34,9 +34,11 @@ const Register = () => {
           onChange={(e) => setFormData({ ...formData, password: e.target.value })}
           className={styles.input}
         />
-        <button type="submit" className={styles.button}>
-          Register
-        </button>
+        <div className="login-button-container">
+          <button type="submit" className={"game-button"}>
+            Register
+          </button>
+        </div>
         {message && <p className={styles.message}>{message}</p>}
       </form>
     </div>

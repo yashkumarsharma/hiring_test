@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import useHoverSound from '../hooks/useHoverSound';
 import styles from './Login.module.css';
 
 const Login = ({ onLogin }) => {
   const [formData, setFormData] = useState({ username: '', password: '' });
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const playHoverSound = useHoverSound();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -48,10 +50,18 @@ const Login = ({ onLogin }) => {
           className={styles.input}
         />
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <button type="submit" className={`${styles.button} ${styles.loginButton}`}>
+          <button
+            type="submit"
+            className={"game-button"}
+            onMouseEnter={playHoverSound}
+          >
             Login
           </button>
-          <button type="button" onClick={handleRegisterRedirect} className={`${styles.button} ${styles.registerButton}`}>
+          <button
+            type="button"
+            onClick={handleRegisterRedirect}
+            className={"game-button"}
+            onMouseEnter={playHoverSound}>
             Register
           </button>
         </div>
