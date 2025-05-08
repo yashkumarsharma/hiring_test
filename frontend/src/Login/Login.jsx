@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import useHoverSound from '../hooks/useHoverSound';
+import useBgSound from '../hooks/useBgSound';
 import styles from './Login.module.css';
 
 const Login = ({ onLogin }) => {
@@ -9,6 +10,14 @@ const Login = ({ onLogin }) => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const playHoverSound = useHoverSound();
+  const playBgSound = useBgSound();
+
+    useEffect(() => {
+      document.addEventListener("click", playBgSound, { once: true });
+      return () => {
+        document.removeEventListener("click", playBgSound);
+      };
+    }, [playBgSound]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
