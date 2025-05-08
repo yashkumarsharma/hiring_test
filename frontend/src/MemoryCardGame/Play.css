@@ -111,38 +111,6 @@
     justify-content: space-between;
 }
 
-/* Game title styling */
-.game-title {
-    font-family: "Orbitron", sans-serif; /* Futuristic font for space theme */
-    font-size: 100px; /* Large size */
-    color: #ffcc00; /* Yellow, matching stars */
-    text-shadow: 
-        0 0 10px #ffcc00, /* Outer glow */
-        0 0 20px #ffaa00, /* Brighter inner glow */
-        0 0 30px rgba(255, 255, 255, 0.6); /* Subtle white glow */
-    margin-top: 70px;
-    z-index: 10;
-    animation: pulseTitle 3s infinite; /* Add glowing pulse animation */
-}
-
-/* Title pulse animation */
-@keyframes pulseTitle {
-    0%, 100% {
-        text-shadow: 
-            0 0 10px #ffcc00,
-            0 0 20px #ffaa00,
-            0 0 30px rgba(255, 255, 255, 0.6);
-        transform: scale(1);
-    }
-    50% {
-        text-shadow: 
-            0 0 20px #ffaa00,
-            0 0 40px #ffcc00,
-            0 0 60px rgba(255, 255, 255, 0.9);
-        transform: scale(1.05); /* Slight size increase for pulse effect */
-    }
-}
-
 /* Button container */
 .button-container {
     display: flex;
