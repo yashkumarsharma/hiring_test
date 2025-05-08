@@ -47,7 +47,7 @@ const Login = ({ onLogin }) => {
           onChange={(e) => setFormData({ ...formData, password: e.target.value })}
           className={styles.input}
         />
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div className={styles.buttonContainer}>
           <button type="submit" className={`${styles.button} ${styles.loginButton}`}>
             Login
           </button>
@@ -55,7 +55,7 @@ const Login = ({ onLogin }) => {
             Register
           </button>
         </div>
-        {error && <p className={styles.error}>{error}</p>}
+        {error && <p className={styles.message}>{error}</p>}
       </form>
     </div>
   );
