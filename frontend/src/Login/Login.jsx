@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import useHoverSound from '../hooks/useHoverSound';
 import useBgSound from '../hooks/useBgSound';
+import useClickSound from '../hooks/useClickSound';
 import styles from './Login.module.css';
 
 const Login = ({ onLogin }) => {
@@ -11,6 +12,7 @@ const Login = ({ onLogin }) => {
   const navigate = useNavigate();
   const playHoverSound = useHoverSound();
   const playBgSound = useBgSound();
+  const clickSound = useClickSound();
 
     useEffect(() => {
       document.addEventListener("click", playBgSound, { once: true });
@@ -63,12 +65,13 @@ const Login = ({ onLogin }) => {
             type="submit"
             className={"game-button"}
             onMouseEnter={playHoverSound}
+            onClick={clickSound}
           >
             Login
           </button>
           <button
             type="button"
-            onClick={handleRegisterRedirect}
+            onClick={() => {clickSound(); handleRegisterRedirect();}}
             className={"game-button"}
             onMouseEnter={playHoverSound}>
             Register
