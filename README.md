@@ -1,73 +1,15 @@
 
-## Card Memory Game - Simplified Skill Test
+## Changes in Frontend
 
-### Welcome!
-Thank you for your interest in joining! This is a simplified skill test designed to understand your approach to problem-solving and development. The tasks are categorized based on your area of expertise.
+1. Added reusable hooks to play existing interactive sounds
+2. Added Responsiveness on login and register page
+3. Added a new route /test to test the Level Selection Modal (which I extracted from existing code in Play.jsx). This can be further refined, but kept it as it is for now.
+4. Attached the screenshots below
 
----
+### Notes - Todos:
+1. Clean up Play.jsx to use reusable hooks
+2. Create more reusable components/hooks
 
-### 🎯 **Objective:**
-Build a small part of a card memory game based on your assigned role. This is meant to be completed within **2–3 hours** to showcase your skills.
-
-### 🛠️ **Tech Stack:**
-- Frontend: React, Vite
-- Backend: Node.js, Express
-- Database: MongoDB (only if applicable)
-- Web3: MetaMask integration (only if applicable)
-
-### 🚀 **Setup Guide:**
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YaroslavPedrovic/hiring_test.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd YaroslavPedrovic
-   ```
-3. Set up the backend:
-   ```bash
-   cd ./backend
-   npm install
-   npm start
-   ```
-4. Set up the frontend:
-   ```bash
-   cd ../frontend
-   npm install
-   npm start
-   ```
-5. Visit `http://localhost:5173` to see the project.
-
----
-
-### 🧩 **Task Breakdown by Role (Ordered by Importance):**
-
-#### **Frontend Developer:**
-- Style the login page to be visually appealing and responsive.
-- Create a modal dialog for level selection (Easy, Medium, Hard).
-
-#### **Backend Developer:**
-- Implement a simple API endpoint to save game results.
-- Create a route to fetch the game result history (no need for complex authentication).
-
-#### **Full Stack Developer:**
-- Complete both the Frontend and Backend tasks.
-- Integrate the API to display the game result history on a new page.
-
-#### **Web3 Developer:**
-- Implement MetaMask wallet connection.
-- Show a message displaying the connected wallet address.
-
-#### **Designer:**
-- Create assets like a styled Play button and card designs.
-- Suggest UI/UX improvements for the main screen.
-
-#### **QA Tester:**
-- Create a comprehensive testing plan that outlines your testing strategy for the card memory game, including at least 8 test cases with detailed steps and expected outcomes.  
-- Additionally, suggest best practices for maintaining quality throughout the development lifecycle.
-
----
-
----
-
-### ⚡ **Good Luck and Have Fun!**
+<img width="1414" alt="Screenshot 2025-05-09 at 3 38 19 AM" src="https://github.com/user-attachments/assets/66cd5956-caeb-4b19-880f-f534014b98f5" />
+<img width="1414" alt="Screenshot 2025-05-09 at 3 38 29 AM" src="https://github.com/user-attachments/assets/cdb9871a-add5-42a9-bd8c-577c9ec7e840" />
+<img width="1414" alt="Screenshot 2025-05-09 at 3 38 34 AM" src="https://github.com/user-attachments/assets/aaaee518-b1fa-4a67-a3fb-e643d4ad8b34" />
